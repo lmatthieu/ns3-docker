@@ -32,6 +32,7 @@ RUN conda install -y matplotlib
 RUN conda install -y networkx
 
 # Install ns3 dependencies
+RUN apt-get install --yes python-software-properties
 RUN add-apt-repository ppa:ubuntu-toolchain-r/test
 RUN apt-get update
 RUN apt-get install --yes wget make clang-3.5 python-dev

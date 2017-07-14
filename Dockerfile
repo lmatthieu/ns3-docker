@@ -33,11 +33,11 @@ RUN conda install -y networkx
 
 # Install ns3 dependencies
 RUN apt-get install --yes python-software-properties
+RUN apt-get install --yes software-properties-common
 RUN add-apt-repository ppa:ubuntu-toolchain-r/test
 RUN apt-get update
 RUN apt-get install --yes wget make clang-3.5 python-dev
 RUN apt-get install --yes libgsl0-dev
-RUN apt-get install --yes software-properties-common
 RUN apt-get install --yes gcc-5 g++-5 cgdb
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /usr/bin/g++ g++ /usr/bin/g++-5
 

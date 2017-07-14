@@ -1,2 +1,3 @@
 # ns3-docker
-NS3 Docker image
+A simple NS3 Docker image used for distributed algorithm experimentations
+

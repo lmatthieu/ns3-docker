@@ -51,7 +51,7 @@ WORKDIR /opt/ns/ns-allinone-3.26
 RUN ./build.py --enable-examples --enable-tests
 
 WORKDIR /opt/ns/ns-allinone-3.26/ns-3.26
-RUN ./test.py core
+#RUN ./test.py core
 
 # Install NetAnim
 RUN apt-get install --yes netanim

@@ -31,6 +31,10 @@ RUN conda install -y pandas
 RUN conda install -y matplotlib
 RUN conda install -y networkx
 
+# Install notebook extensions
+RUN conda install -c conda-forge jupyter_contrib_nbextensions
+RUN conda install -c conda-forge jupyter_nbextensions_configurator
+
 # Install ns3 dependencies
 RUN apt-get install --yes python-software-properties
 RUN apt-get install --yes software-properties-common
@@ -55,9 +59,6 @@ WORKDIR /opt/ns/ns-allinone-3.26/ns-3.26
 
 # Install NetAnim
 RUN apt-get install --yes netanim
-
-# Install notebook extensions
-RUN conda install -c conda-forge jupyter_contrib_nbextensions
 
 EXPOSE 8888
 

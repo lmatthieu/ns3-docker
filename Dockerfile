@@ -56,6 +56,9 @@ WORKDIR /opt/ns/ns-allinone-3.26/ns-3.26
 # Install NetAnim
 RUN apt-get install --yes netanim
 
+# Install notebook extensions
+RUN conda install -c conda-forge jupyter_contrib_nbextensions
+
 EXPOSE 8888
 
 CMD /bin/bash

@@ -60,6 +60,12 @@ WORKDIR /opt/ns/ns-allinone-3.26/ns-3.26
 # Install NetAnim
 RUN apt-get install --yes netanim
 
+# Install CMake
+RUN apt-get install --yes cmake cmake-curses-gui
+
+# Install Boost
+RUN apt-get install --yes libboost-graph-dev
+
 EXPOSE 8888
 
 CMD /bin/bash
